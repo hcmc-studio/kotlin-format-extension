@@ -1,6 +1,7 @@
 val kotlin_version: String by project
 val project_version: String by project
 val jdk_version: String by project
+val kotlinx_datetime_version: String by project
 
 plugins {
     kotlin("jvm")
@@ -44,4 +45,5 @@ publishing {
 dependencies {
     // Core extension warning: should not include the other library.
     implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlin_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime-jvm:$kotlinx_datetime_version")
 }
