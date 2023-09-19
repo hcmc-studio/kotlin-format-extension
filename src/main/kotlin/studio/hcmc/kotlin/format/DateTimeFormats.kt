@@ -1,7 +1,8 @@
 package studio.hcmc.kotlin.format
 
-import kotlinx.datetime.*
-import kotlin.time.Duration
+import kotlinx.datetime.Instant
+import kotlinx.datetime.LocalTime
+import kotlinx.datetime.toKotlinInstant
 
 fun java.sql.Date.toKotlinInstant(): Instant {
     return toInstant().toKotlinInstant()
