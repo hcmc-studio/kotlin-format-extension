@@ -46,4 +46,5 @@ dependencies {
     // Core extension warning: should not include the other library.
     implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlin_version")
     implementation("org.jetbrains.kotlinx:kotlinx-datetime-jvm:$kotlinx_datetime_version")
+    testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
