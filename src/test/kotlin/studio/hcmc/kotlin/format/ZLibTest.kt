@@ -45,24 +45,4 @@ class ZLibTest {
             }
         }
     }
-
-    @Test
-    fun fileTest() {
-        val bytes = this::class.java.classLoader.getResourceAsStream("test.json")?.readAllBytes() ?: throw AssertionError()
-        val deflated = ZLib.deflate(bytes)
-        println(deflated.size)
-    }
-
-    @Test
-    fun benchmark() {
-        val bytes = this::class.java.classLoader.getResourceAsStream("test.json")?.readAllBytes() ?: throw AssertionError()
-        var elapsed = 0L
-        repeat(1000) {
-            val timestamp = System.nanoTime()
-            ZLib.deflate(bytes)
-            elapsed += System.nanoTime() - timestamp
-        }
-
-        println("${elapsed}ns")
-    }
 }
